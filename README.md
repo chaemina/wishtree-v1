@@ -3,8 +3,6 @@
 크리스마스 소원 트리는 나만의 소원을 작성하고, 다른 이들의 소원을 응원하며 함께 따뜻한 마음을 나눌 수 있는 공간입니다. 
 
 
-다듬어드린 문장은 다음과 같습니다:
-
 ## 💻 Project
 이 프로젝트는 `Next.js`와 `TypeScript`를 사용해 개발되었으며, 프론트엔드 개발 내용을 담고 있습니다. 
 
@@ -121,9 +119,8 @@
    |- src
       |- app
          |- (root)
-         |- main
-         |- writewish
-         |- selectobject
+         |- write
+         |- selectobj
          |- wish
             |- [id]
             |- mywish
