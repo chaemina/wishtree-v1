@@ -10,13 +10,13 @@
 
 반응형 웹사이트로, 데스크탑과 모바일 환경 모두에서 이용 가능합니다.
 
-### 🧑🏻‍🤝‍🧑🏻 Contributors
+## 🧑🏻‍🤝‍🧑🏻 Contributors
 - UI Designer: 정선형
 - BGM Composer: 최윤서
 - FrontEnd Developer: 채민아
 - BackEnd Developer: 김유선
 
-### 🔎 Purpose
+## 🔎 Purpose
 
 
 ## 주요 기능 
