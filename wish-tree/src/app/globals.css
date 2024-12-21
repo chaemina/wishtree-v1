@@ -3,19 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0C7A55;
+  --foreground: #ededed;
+  --buttonRed : #D85B59;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0C7A55;
     --foreground: #ededed;
+    --buttonRed : #D85B59;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: WishFont, Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "WishFont";
+  src: url("/fonts/WishFont.ttf") format("truetype");
 }
