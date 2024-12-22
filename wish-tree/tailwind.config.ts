@@ -24,6 +24,16 @@ export default {
         'desktop': '1280px',
         // => @media (min-width: 1280px) { ... }
       },
+      animation: {
+        fadeInOut: 'fadeInOut 3s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeInOut: {
+          '0%': { opacity: '0' },
+          '50%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
+      },
     },
   },
   plugins: [],
