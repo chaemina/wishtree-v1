@@ -1,10 +1,10 @@
-import MainMolecule from "../../../shared/components/molecules/MainMolecule"
+import NoWishTemplate from "../../../shared/components/templates/NoWishTemplate"
 
 export default function Main() {
 
     return (
-        <div >
-             <MainMolecule/>
+        <div className="w-full h-full">
+             <NoWishTemplate/>
         </div>
     )
 }
