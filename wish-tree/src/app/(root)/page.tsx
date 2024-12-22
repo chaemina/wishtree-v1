@@ -1,17 +1,10 @@
-"use client";
-
-import CustomButton from "../../../shared/components/atoms/CustomButton"
+import MainMolecule from "../../../shared/components/molecules/MainMolecule"
 
 export default function Main() {
 
-    const work = () => {
-        return (
-            console.log("동작")
-        )
-    }
     return (
-        <div>
-          <CustomButton btnColor="red" handleClick={work}>소원 쓰기</CustomButton>
+        <div >
+             <MainMolecule/>
         </div>
     )
 }
