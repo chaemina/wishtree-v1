@@ -5,8 +5,8 @@ const SVGBackground = ({ position }: SVGBackgroundProps) => {
     
   return (
     <div
-      className={`absolute z-0 ${position.TB} ${position.LR}`}>
-      <LargeLight  />
+      className={`absolute z-0 transform ${position.LR} ${position.TB} w-[59px] h-[59px]`}>
+      <LargeLight />
     </div>
   );
 };

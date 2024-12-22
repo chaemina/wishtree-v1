@@ -1,5 +1,7 @@
 export const POSITIONS = [
-    { TB: 'top-10', LR: 'right-10' },
-    { TB: 'top-0', LR: 'left-10' },
-    { TB: 'top-60', LR: 'left-0' },
+    { TB: 'translate-x-[300px]', LR: 'translate-y-[10px]' },
+    { TB: 'translate-x-[-300px]', LR: 'translate-y-[120px]' },
+    { TB: 'translate-x-[-250px]', LR: 'translate-y-[300px]' },
+    { TB: 'translate-x-[250px]', LR: 'translate-y-[400px]' }
   ];
+

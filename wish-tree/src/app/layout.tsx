@@ -12,10 +12,7 @@ export default function RootLayout({
   
   return (
     <html>
-      <body className="relative w-screen h-dvh items-center flex flex-col">
-        {/* <div className="absolute top-0 left-10 w-full h-full z-0">
-          <LargeLight className="w-full h-full" />
-        </div> */}
+      <body className="relative w-screen h-screen items-center flex flex-col">
          {POSITIONS.map((position, index) => (
           <SVGBackground key={index} position={position} />
         ))}

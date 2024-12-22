@@ -5,6 +5,16 @@ export default {
     "./shared/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ], 
+  safelist: [
+    'translate-x-[300px]',
+    'translate-y-[10px]',
+    'translate-x-[-300px]',
+    'translate-y-[120px]',
+    'translate-x-[-250px]',
+    'translate-y-[300px]',
+    'translate-x-[250px]',
+    'translate-y-[400px]',
   ],
   theme: {
     extend: {
