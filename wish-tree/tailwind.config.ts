@@ -2,8 +2,8 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
+    "./shared/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -11,13 +11,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        buttonRed : "var(--buttonRed)",
+        myRed : "#D85B59",
+        myYellow: "#FEE500",
       },
       screens: {
-        'mobile': '640px',
+        'mobile': '200px',
         // => @media (min-width: 640px) { ... }
   
-        'laptop': '1024px',
+        'laptop': '760px',
         // => @media (min-width: 1024px) { ... }
   
         'desktop': '1280px',
@@ -26,4 +27,5 @@ export default {
     },
   },
   plugins: [],
+  important : true,
 } satisfies Config;

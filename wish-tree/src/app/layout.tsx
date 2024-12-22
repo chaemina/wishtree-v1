@@ -1,5 +1,5 @@
 import "./globals.css";
-import Header from "../../shared/componets/atoms/Header"
+import Header from "../../shared/components/atoms/Header"
 
 export default function RootLayout({
   children,
@@ -8,8 +8,8 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-        <body className="w-screen h-dvh justify-center flex">
-            <Header className="relative h-[5rem] w-[50%] mobile:w-[35%] laptop:w-[25%] desktop:w-[20%] top-20"/>
+        <body className="w-screen h-dvh items-center flex flex-col">
+            <Header className="relative h-[5rem] w-[50%] mobile:w-[35%] laptop:w-[30%] desktop:w-[20%] mt-10"/>
             {children}
         </body>
     </html>
