@@ -8,8 +8,8 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-        <body className="w-screen h-screen justify-center flex items-center">
-            <Header className="w-[50%] md:w-[40%] lg:w-[30%] 2xl:w-[25%]"/>
+        <body className="w-screen h-dvh justify-center flex">
+            <Header className="relative h-[5rem] w-[50%] mobile:w-[35%] laptop:w-[25%] desktop:w-[20%] top-20"/>
             {children}
         </body>
     </html>
