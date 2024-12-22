@@ -6,4 +6,3 @@ export interface Position {
     TB: string;
     LR: string;
   }
-  
