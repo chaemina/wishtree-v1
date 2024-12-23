@@ -39,6 +39,7 @@ export default {
         foreground: "var(--foreground)",
         myRed : "#D85B59",
         myYellow: "#FEE500",
+        bgCard : "#FDCD69"
       },
       screens: {
         'mobile': '200px',
