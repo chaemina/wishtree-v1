@@ -8,7 +8,7 @@ export default function Wish() {
     return (
         <>
          {/* 내 소원 전달 */}
-           <WishTemplate wish="소원 내용"/> 
+           <WishTemplate content="소원 내용"/> 
         </>
     )
 }

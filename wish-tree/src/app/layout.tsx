@@ -6,7 +6,8 @@ import { POSITIONS, POSITIONS_M } from "../../shared/constants/position";
 import "./globals.css";
 import CustomButton from "../../shared/components/atoms/CustomButton";
 import useSoundPlayer from "../../shared/hooks/useSoundPlayer";
-
+import { Provider } from 'react-redux';
+import Store from "../../shared/redux/Store";
 
 
 export default function RootLayout({
@@ -17,6 +18,7 @@ export default function RootLayout({
   const { isPlaying, togglePlay } = useSoundPlayer("/sounds/bgm.mp3"); 
 
   return (
+    <Provider store={Store}>
     <html className="overflow-hidden">
       <body className="relative w-full h-screen items-center flex flex-col overflow-hidden">
         {POSITIONS.map((position, index) => (
@@ -30,5 +32,6 @@ export default function RootLayout({
         {children}
       </body>
     </html>
+    </Provider>
   );
 }

@@ -5,5 +5,5 @@ export interface BoxProps {
 }
 
 export interface WishCardProps {
-    wish: string; 
+    content: string; 
 }

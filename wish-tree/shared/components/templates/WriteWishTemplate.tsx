@@ -5,9 +5,12 @@ import MessageCard from "../atoms/MessageCard";
 import CustomInput from "../atoms/CustomInput";
 import CustomButton from "../atoms/CustomButton";
 import { useRouter } from "next/navigation";
+import { setContent } from "../../redux/slice/TemplateWishSlice";
+import { useDispatch } from 'react-redux';
 
 const WriteWishTemplate = () => {
     const router = useRouter();
+    const dispatch = useDispatch();
     const [wish, setWish] = useState("");
     const name = "채민아" // api 연결 
 
@@ -16,8 +19,8 @@ const WriteWishTemplate = () => {
       };
     
       const handleButtonClick = () => {
-        console.log(wish); // wish를 전역상태로 저장하기 
         // router 로 넘어가기 전, wish가 비어있는 경우 경고 alert 띄우기
+        dispatch(setContent(wish));
         router.push("/selectobj")
       };
 
