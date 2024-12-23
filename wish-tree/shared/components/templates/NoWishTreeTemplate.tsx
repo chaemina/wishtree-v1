@@ -25,9 +25,9 @@ const NoWishTreeTemplate = () => {
             <LargeTree className="absolute w-[500px] laptop:w-[600px] desktop:w-[100%] transform translate-y-24"/>
             {/* token 여부에 따라 다른 버튼 보여주기 */}
             {token ? (
-                <CustomButton className="absolute bottom-10" btnColor="red" handleClick={handleClick}>소원 쓰기</CustomButton>
+                <CustomButton className="absolute bottom-10 min-w-[10rem]" btnColor="red" handleClick={handleClick}>소원 쓰기</CustomButton>
             ): (
-                <CustomButton className="absolute bottom-10" handleClick={()=>{console.log("click")}}>카카오 로그인</CustomButton>
+                <CustomButton className="absolute bottom-10 min-w-[10rem]" handleClick={()=>{console.log("click")}}>카카오 로그인</CustomButton>
             )}
         </div>
     )

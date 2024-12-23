@@ -11,7 +11,7 @@ const CustomButton = ({ children, handleClick,btnColor, className}: CustomButton
   return (
     <button
       title={children}
-      className={`${color} ${className} mobile:w-[8rem] text-2xl laptop:text-3xl laptop:w-[15rem] laptop:h-[3rem] desktop:text-4xl desktop:w-[15rem]  desktop:h-[4rem] rounded-3xl p-1`}
+      className={`${color} ${className} text-xl laptop:text-2xl desktop:text-3xl rounded-3xl p-1 pl-4 pr-4`}
       onClick={handleClick}
       aria-label={children}
     >
