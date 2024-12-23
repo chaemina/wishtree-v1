@@ -28,13 +28,12 @@ const MainTemplate = () => {
   
   console.log(data)
   
-  // 로딩 중 또는 에러 처리
   if (isLoading) {
-    return <div>로딩 중...</div>;
+    return <div className="w-full flex justify-center items-center"><p>로딩 중...</p></div>;
   }
 
   if (error) {
-    return <div>에러가 발생했습니다.</div>;
+    return <div className="w-full flex justify-center items-center"><p>에러가 발생했습니다</p></div>;
   }
 
   return (
