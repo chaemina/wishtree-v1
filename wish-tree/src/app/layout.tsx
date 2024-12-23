@@ -7,6 +7,8 @@ import "./globals.css";
 import CustomButton from "../../shared/components/atoms/CustomButton";
 import useSoundPlayer from "../../shared/hooks/useSoundPlayer";
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
