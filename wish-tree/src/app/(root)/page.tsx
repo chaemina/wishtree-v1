@@ -1,10 +1,18 @@
-import NoWishTemplate from "../../../shared/components/templates/NoWishTemplate"
+import NoWishTreeTemplate from "../../../shared/components/templates/NoWishTreeTemplate"
+import WishTreeTemplate from "../../../shared/components/templates/WishTreeTemplate";
 
 export default function Main() {
+    const written = true;
+
 
     return (
         <div className="w-full h-full">
-             <NoWishTemplate/>
+            {/* token을 담아서 요청 보내고  */}
+            {written ? (
+                <WishTreeTemplate/>
+            ): (
+                <NoWishTreeTemplate/>
+            ) }
         </div>
     )
 }

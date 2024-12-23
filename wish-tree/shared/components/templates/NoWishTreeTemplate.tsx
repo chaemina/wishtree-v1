@@ -7,7 +7,7 @@ import CustomButton from "../atoms/CustomButton";
 import { useEffect ,useState } from "react";
 import { getToken } from "../../hooks/useToken";
 
-const NoWishTemplate = () => {
+const NoWishTreeTemplate = () => {
     const message = Message.MAIN_MESSAGE
     const [token, setToken] = useState<string | null>(getToken()); 
 
@@ -26,4 +26,4 @@ const NoWishTemplate = () => {
     )
 }
 
-export default NoWishTemplate;
+export default NoWishTreeTemplate;
