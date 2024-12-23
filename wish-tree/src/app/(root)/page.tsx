@@ -2,7 +2,7 @@ import NoWishTreeTemplate from "../../../shared/components/templates/NoWishTreeT
 import WishTreeTemplate from "../../../shared/components/templates/WishTreeTemplate";
 
 export default function Main() {
-    const written = true;
+    const written = false;
 
 
     return (
