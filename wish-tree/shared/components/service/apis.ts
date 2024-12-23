@@ -1,4 +1,5 @@
 import { instance } from "./instance";
+import { WishProps } from "../../types/WishProps";
 
 // 카카오에서 발급 받은 인가코드를 담아서 post
 export const kakaoapi = async (code :string) => {
@@ -12,10 +13,26 @@ export const kakaoapi = async (code :string) => {
   };
 
 
-// export const garbagesWaitingList = async () => {
-//     const response = await instance.get('/api/garbages/waiting');
-//     return response.data;
-// };
+export const mainapi = async () => {
+    const response = await instance.get('/wishes');
+    return response.data;
+};
+
+export const wishapi = async (wish : WishProps) => {
+    try {
+      const response = await instance.post('/api/wish',  wish);
+      return response.data;
+    } catch (error) {
+      console.error('Error during Kakao login API call', error);
+      throw error;
+    }
+  };
+
+
+export const mywishapi = async () => {
+    const response = await instance.get('/api/wish');
+    return response.data;
+};
 
 // export const garbageDetail = async ({ garbageId }: { garbageId: number }) => {
 //     try {

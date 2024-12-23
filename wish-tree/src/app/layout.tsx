@@ -8,7 +8,9 @@ import CustomButton from "../../shared/components/atoms/CustomButton";
 import useSoundPlayer from "../../shared/hooks/useSoundPlayer";
 import { Provider } from 'react-redux';
 import Store from "../../shared/redux/Store";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+const queryClient = new QueryClient();
 
 export default function RootLayout({
   children,
@@ -18,6 +20,7 @@ export default function RootLayout({
   const { isPlaying, togglePlay } = useSoundPlayer("/sounds/bgm.mp3"); 
 
   return (
+    <QueryClientProvider client={queryClient}>
     <Provider store={Store}>
     <html className="overflow-hidden">
       <body className="relative w-full h-screen items-center flex flex-col overflow-hidden">
@@ -33,5 +36,6 @@ export default function RootLayout({
       </body>
     </html>
     </Provider>
+    </QueryClientProvider>
   );
 }

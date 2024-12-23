@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { saveToken, getToken } from '../../hooks/useToken';
+import { getToken, saveToken } from '../../hooks/useToken';
 
 export const instance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL, 
@@ -10,37 +10,31 @@ export const instance = axios.create({
 });
 
 instance.interceptors.request.use(
-  async config => {
-    console.log('[API REQUEST]', config);
-
-    const token = await getToken();
+  async (config) => {
+    const token = await getToken();  
     if (token) {
-      config.headers['Authorization'] = `${token}`;
+      config.headers['Authorization'] = `${token}`;  
     } else {
-      console.log('요청에 토큰이 담기지 않았습니다.');
+      console.log('토큰이 존재하지 않습니다.');
     }
-
     return config;
   },
-  error => {
+  (error) => {
     console.log(`[API REQUEST ERROR] ${error}`);
     return Promise.reject(error);
-  },
+  }
 );
 
 instance.interceptors.response.use(
-  async response => {
-    console.log('[API RESPONSE]', response);
-    
+  async (response) => {
     const token = response.headers['authorization'];
     if (token) {
       await saveToken(token); 
     }
-    
     return response;
   },
-  error => {
+  (error) => {
     console.log(`[API RESPONSE ERROR] ${error}`);
     return Promise.reject(error);
-  },
+  }
 );

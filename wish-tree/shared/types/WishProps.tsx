@@ -1,4 +1,4 @@
 export interface WishProps {
     content: string; 
-    obj_id : number;
+    obj_id : number | null ;
 }
