@@ -19,7 +19,7 @@ const WishTreeTemplate = ({ wishes }:Wishes) => { // Destructure the wishes prop
             <MainMolecule message={message} />
             {/* 소원 + 트리 molecule 컴포넌트 */}
             <WishTreeMolecule wishes={wishes} />
-            <CustomButton className="mobile:mt-5 mb-5 laptop:mt-10" btnColor="red" handleClick={goToMyWish}>내 소원 보러가기</CustomButton>
+            <CustomButton className="mobile:mt-5 laptop:mt-10" btnColor="red" handleClick={goToMyWish}>내 소원 보러가기</CustomButton>
         </div>
     );
 };
