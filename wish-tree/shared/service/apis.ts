@@ -34,6 +34,12 @@ export const mywishapi = async () => {
     return response.data;
 };
 
+export const friendwishapi = async (id: string) => {
+  const response = await instance.get(`/api/wish/${id}`);  // id를 URL에 포함시킴
+  return response.data;
+};
+
+
 // export const garbageDetail = async ({ garbageId }: { garbageId: number }) => {
 //     try {
 //       const response = await instance.get(`/api/garbages/${garbageId}`);
