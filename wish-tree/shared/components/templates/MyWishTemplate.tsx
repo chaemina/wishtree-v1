@@ -3,6 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { mywishapi } from "../../service/apis";
 import WishTemplate from "./WishTemplate";
+import CustomButton from "../atoms/CustomButton";
 
 export default function MyWishTemplate() {
   const { data, error, isLoading } = useQuery({
@@ -23,5 +24,8 @@ export default function MyWishTemplate() {
   const name = "나"
   const comments = data?.response?.comments
   const wishId = data?.response?.wish_id
-  return <WishTemplate content={content} name={name} comments={comments}  wishId={wishId} />;
+  return (
+      <WishTemplate content={content} name={name} comments={comments}  wishId={wishId} />
+  )
+   
 }

@@ -5,8 +5,10 @@ export interface BoxProps {
 }
 
 export interface WishCardProps {
-    content: string; 
-}
+    content: string;
+    onContentChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; // `content`를 수정할 때 사용
+  }
+  
 
 export interface WishInfoProps {
     content: string;

@@ -34,6 +34,16 @@ export const mywishapi = async () => {
     return response.data;
 };
 
+export const editwishapi = async ( content: string ) => {
+  try {
+      const response = await instance.patch('/api/wish', {content});
+    return response.data; 
+  } catch (error) {
+    console.error('소원 수정 API 호출 실패:', error);
+    throw error;
+  }
+};
+
 export const friendwishapi = async (id: string) => {
   const response = await instance.get(`/api/wish/${id}`);  // id를 URL에 포함시킴
   return response.data;

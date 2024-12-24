@@ -6,8 +6,8 @@ export const metadata = {
   
 export default function SelectObj() {
     return (
-        <div>
+        <>
             <SelectObjTemplate/>
-        </div>
+        </>
     )
 }
