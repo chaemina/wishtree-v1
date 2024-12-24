@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getToken, saveToken } from '../hooks/useToken';
 
 export const instance = axios.create({
-  baseURL: "https://buriburi.site:8080", 
+  baseURL: process.env.NEXT_PUBLIC_API_URL, 
   timeout: 50000,
   headers: {
     'Content-Type': 'application/json; charset=utf-8',
