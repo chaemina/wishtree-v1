@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: #0C7A55;
+  --foreground: #DFD9C9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0C7A55;
+    --foreground: #DFD9C9;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: WishFont, Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "WishFont";
+  src: url("/fonts/WishFont.ttf") format("truetype");
+}
