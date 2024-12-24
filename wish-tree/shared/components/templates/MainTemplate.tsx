@@ -40,8 +40,7 @@ const MainTemplate = () => {
   return (
     <div className="w-full h-full">
       {/* token과 written 값에 따라 다른 컴포넌트 렌더링 */}
-      <WishTreeTemplate wishes={wishes} />
-      {/* {token && written ? <WishTreeTemplate wishes={wishes} /> : <NoWishTreeTemplate />} */}
+      {token && written ? <WishTreeTemplate wishes={wishes} /> : <NoWishTreeTemplate />}
     </div>
   );
 };
