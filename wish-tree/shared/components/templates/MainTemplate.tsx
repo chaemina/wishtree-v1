@@ -5,7 +5,7 @@ import NoWishTreeTemplate from "../../../shared/components/templates/NoWishTreeT
 import WishTreeTemplate from "../../../shared/components/templates/WishTreeTemplate";
 import { getToken } from "../../../shared/hooks/useToken";
 import { useQuery } from "@tanstack/react-query";
-import { mainapi } from "../service/apis";
+import { mainapi } from "../../service/apis";
 
 const MainTemplate = () => {
   const [token, setToken] = useState<string | null>(null);
@@ -25,8 +25,9 @@ const MainTemplate = () => {
   });
 
   const written = data?.response?.is_wish_writed
-  
-  console.log(data)
+  const wishes = data?.response?.wishes
+  console.log(wishes)
+  //data.response.wishes -> WishTreeTemplate로 전달 
   
   if (isLoading) {
     return <div className="w-full flex justify-center items-center"><p>로딩 중...</p></div>;
@@ -39,7 +40,7 @@ const MainTemplate = () => {
   return (
     <div className="w-full h-full">
       {/* token과 written 값에 따라 다른 컴포넌트 렌더링 */}
-      {token && written ? <WishTreeTemplate /> : <NoWishTreeTemplate />}
+      {token && written ? <WishTreeTemplate wishes={wishes} /> : <NoWishTreeTemplate />}
     </div>
   );
 };

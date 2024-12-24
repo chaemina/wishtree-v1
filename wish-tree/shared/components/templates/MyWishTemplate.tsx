@@ -1,7 +1,7 @@
 "use client"
 
 import { useQuery } from "@tanstack/react-query";
-import { mywishapi } from "../service/apis";
+import { mywishapi } from "../../service/apis";
 import WishTemplate from "./WishTemplate";
 
 export default function MyWishTemplate() {

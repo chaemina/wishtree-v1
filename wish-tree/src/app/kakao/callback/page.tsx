@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { kakaoapi } from "../../../../shared/components/service/apis";
+import { kakaoapi } from "../../../../shared/service/apis";
 import { useDispatch } from "react-redux";
 import { extractCodeFromUrl } from "../../../../shared/utils/extractCodeFromUrl";
 

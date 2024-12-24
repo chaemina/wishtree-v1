@@ -9,7 +9,7 @@ import { RootState } from "../../redux/RootReducer";
 import { useRouter } from "next/navigation";
 import { useSelector, useDispatch } from 'react-redux';
 import { setObjId } from "../../redux/slice/TemplateWishSlice";
-import { wishapi } from "../service/apis"; 
+import { wishapi } from "../../service/apis"; 
 
 const SelectObjTemplate = () => {
   const router = useRouter();
