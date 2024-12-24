@@ -3,27 +3,35 @@
 import { useState, useEffect } from "react";
 
 const useSoundPlayer = (src: string) => {
-  const [audio] = useState(new Audio(src)); // Audio 객체 생성
-  const [isPlaying, setIsPlaying] = useState(false); // 재생 상태 관리
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null); // 초기 상태는 null
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    // 무한 반복 설정
-    audio.loop = true;
+    // 브라우저 환경에서만 Audio 객체 생성
+    if (typeof window !== "undefined") {
+      const newAudio = new Audio(src);
+      newAudio.loop = true; // 무한 반복 설정
+      setAudio(newAudio);
+    }
 
     return () => {
       // 컴포넌트 언마운트 시 정리
-      audio.pause();
-      audio.currentTime = 0; // 음악 재생 위치 초기화
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
     };
-  }, [audio]);
+  }, [src]); // src가 변경될 때마다 실행
 
   const togglePlay = () => {
-    if (isPlaying) {
-      audio.pause();
-    } else {
-      audio.play();
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
     }
-    setIsPlaying(!isPlaying); // 상태 변경
   };
 
   return { isPlaying, togglePlay };
