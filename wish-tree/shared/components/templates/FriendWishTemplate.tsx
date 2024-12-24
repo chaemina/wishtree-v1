@@ -28,6 +28,9 @@ export default function FriendWishTemplate() {
     }
 
     const content = data?.response?.content;
+    const name = data?.response?.writer_name
+    const comments = data?.response?.comments;
+    const wishId = data?.response?.wish_id;
 
-    return <WishTemplate content={content} />;
+    return <WishTemplate content={content} name={name} comments={comments} wishId={wishId} />;
 }

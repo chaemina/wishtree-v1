@@ -19,6 +19,9 @@ export default function MyWishTemplate() {
   }
 
   const content = data?.response?.content;
-
-  return <WishTemplate content={content} />;
+  console.log(data)
+  const name = "나"
+  const comments = data?.response?.comments
+  const wishId = data?.response?.wish_id
+  return <WishTemplate content={content} name={name} comments={comments}  wishId={wishId} />;
 }

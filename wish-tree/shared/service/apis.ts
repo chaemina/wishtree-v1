@@ -39,17 +39,12 @@ export const friendwishapi = async (id: string) => {
   return response.data;
 };
 
-
-// export const garbageDetail = async ({ garbageId }: { garbageId: number }) => {
-//     try {
-//       const response = await instance.get(`/api/garbages/${garbageId}`);
-//       if (response.data.success) {
-//         return response.data.response;
-//       } else {
-//         throw new Error('Failed to fetch data');
-//       }
-//     } catch (error) {
-//       console.error('Error fetching chat data:', error);
-//       throw error;
-//     }
-// };
+export const commentapi = async (comment:string, id: string) => {
+  try {
+    const response = await instance.post(`/api/comment/${id}`,  comment);
+    return response.data;
+  } catch (error) {
+    console.error('Error during Kakao login API call', error);
+    throw error;
+  }
+};
