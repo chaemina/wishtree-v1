@@ -37,9 +37,9 @@ export default function RootLayout({
             ))}
             <div className="absolute end-0 m-2 cursor-pointer" onClick={togglePlay}>
               {isPlaying ? (
-                <SoundOff className="w-8 h-8" />
-              ) : (
                 <SoundOn className="w-8 h-8" />
+              ) : (
+                <SoundOff className="w-8 h-8" />
               )}
              </div>
              <CustomButton className="absolute start-0 m-4" handleClick={refresh}>새로고침</CustomButton>
