@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getToken } from "../../hooks/useToken";
 
-const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=aa8362ee4e12d330a4a02a523f17403f&redirect_uri=http://localhost:3000/kakao/callback&response_type=code`;
+const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=aa8362ee4e12d330a4a02a523f17403f&redirect_uri=https://wishtree-v1.vercel.app/kakao/callback&response_type=code`;
 
 const NoWishTreeTemplate = () => {
     const message = Message.MAIN_MESSAGE;
