@@ -1,4 +1,4 @@
-# 🎄 WishTree
+# 🎄 WISH TREE
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/c06ac282-4180-4f64-9e6f-fdb4b349881e" alt="WishTree Screenshot" width="400"/>
@@ -93,11 +93,17 @@ WishTree는 작은 아이디어에서 출발한 토이 프로젝트입니다.
 ## User Interface
 
 **카카오 로그인**
- <img src="https://github.com/user-attachments/assets/380859ab-109d-4148-8dfd-ceddd4fa9826" alt="WishTree Screenshot" width="400"/>
+<div style="display: flex; justify-content: center;">
+ <img src="https://github.com/user-attachments/assets/380859ab-109d-4148-8dfd-ceddd4fa9826" alt="kakaologin" width="300"/>
+</div>
+
+<br>
 
 **소원 작성**
 
-**소원 수정**
+<img src="https://github.com/user-attachments/assets/475c359d-1a6e-4b39-8c1c-5ec0767dc0ac" alt="writewish" width="300"/>
+
+<br>
 
 **소원 조회 및 댓글 작성**
 <div style="display: flex; justify-content: center; gap: 10px;">
@@ -105,10 +111,20 @@ WishTree는 작은 아이디어에서 출발한 토이 프로젝트입니다.
   <img src="https://github.com/user-attachments/assets/b75ba95c-b279-466a-bea3-eda70af5c3b0" alt="IMG_6563" width="300"/>
 </div>
 
+<br>
+
 **소원 목록 랜덤 표시**
 <div style="display: flex; justify-content: center; gap: 10px;">
   <img src="https://github.com/user-attachments/assets/c873befb-5dc4-4445-af88-3fb832f3e06f" alt="IMG_7106" width="200"/>
   <img src="https://github.com/user-attachments/assets/16900fb0-a9c6-4ef3-94e4-67809dea0f95" alt="IMG_7105" width="200"/>
   <img src="https://github.com/user-attachments/assets/b5505eb3-119c-404c-b2ff-1569c652ecf8" alt="IMG_7103" width="200"/>
 </div>
+
+<br>
+
+**애니메이션 효과** 
+
+<img src="https://github.com/user-attachments/assets/0d002ff3-9b22-4a2e-b31f-c5dd437b9b26" alt="animation" width="300"/>
+
+
 
